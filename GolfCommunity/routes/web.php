@@ -16,8 +16,11 @@ use App\Http\Controllers\HomeController;
 
 
 
-Route::get('/home', [HomeController::class, 'index']);
+
 
 Route::get('/', function () {
     return view('home');
 });
+Route::resource('/pertandingans', 'App\Http\Controllers\PertandingansController');
+
+Route::get('/challenge', 'App\Http\Controllers\PertandingansController@list')->name('challenge');

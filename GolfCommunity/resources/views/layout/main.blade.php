@@ -23,7 +23,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light " >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
         <div class="container">
             <a class="navbar-brand" href="/">Golf</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -34,22 +34,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/lowongan">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/lowongan">Aktivitas</a>
+                        <a class="nav-link" href="">Aktivitas</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/lowongan">Venue</a>
+                        <a class="nav-link" href="">Venue</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/lowongan">Komunitas</a>
+                        <a class="nav-link" href="">Komunitas</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/lowongan">Challenge</a>
+                        <a class="nav-link" href="/challenge">Challenge</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/#about">Tentang</a>
+                        <a class="nav-link" href="">Tentang</a>
                     </li>
                     <li class="nav-item active">
                         <button type="button" class="btn btn-secondary">Register</button>
@@ -69,34 +69,6 @@
     <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h6>About</h6>
-                    <p class="text-justify">
-                        Mulai beroperasi tahun 1993, Cikarang Listrindo menjadi Independent Power Producer (IPP) yang beroperasi paling lama di Indonesia, dengan kapasitas terpasang sebesar 1.144MW. Cikarang Listrindo melayani 5 (lima) Kawasan Industri yang terbesar dan paling berkembang di Indonesia.
-                    </p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <h6>Categories</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/category/c-language/">Tentang Kami</a></li>
-                        <li><a href="http://scanfcode.com/category/front-end-development/">CSR</a></li>
-                        <li><a href="http://scanfcode.com/category/back-end-development/">Aset Kami</a></li>
-                        <li><a href="http://scanfcode.com/category/java-programming-language/">Hubungan Investor</a></li>
-                        <li><a href="http://scanfcode.com/category/android/">Tata Kelola Perusahaan</a></li>
-                        <li><a href="http://scanfcode.com/category/templates/">Kontak</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <h6>Quick Links</h6>
-                    <ul class="footer-links">
-
-                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-                    </ul>
-                </div>
             </div>
             <hr>
         </div>
@@ -108,12 +80,13 @@
                     </p>
                 </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12">
                     <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <a class="facebook" href="#"><i class="fa fa-instagram"></i></a>
+
+                        <a class="twitter" href="#"><i class="fa fa-youtube"></i></a>
+
+                        <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
                     </ul>
                 </div>
             </div>
