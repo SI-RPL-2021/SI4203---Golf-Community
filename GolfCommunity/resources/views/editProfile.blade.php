@@ -1,74 +1,125 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<head>
     <meta charset="utf-8">
+    <!--  This file has been downloaded from bootdey.com    @bootdey on twitter -->
+    <!--  All snippets are MIT license http://bootdey.com/license -->
+    <title>profile with data and skills - Bootdey.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body{
+    margin-top:20px;
+    color: #1a202c;
+    text-align: left;
+    background-color: white;    
+}
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
 
-    <title>Update Profile</title>
-  </head>
-  <body>
-  <br><br><br>
-    <div class="container">
-    <div class="row gutters-sm">
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.mt-3 {
+  width: 80%;
+}
+
+.left {
+  float: left;
+}
+
+.bg-gray-300 {
+    background-color: #e2e8f0;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="main-body">
+    
+          <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <img src="https://imgur.com/PXY0FK7" alt="Admin" class="card-img-top" width="150">
                     <div class="mt-3">
-                      <h4>Nama Lengkap</h4>
-                      <h4>@username</h4>
+                      <h4>Username</h4>
+                      <h5>@Username</h5>
                       <hr />
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                      <p class="text-secondary mb-1 left">Profil &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                      <p class="text-secondary mb-1 left">Transaksi Terbaru &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                      <p class="text-secondary mb-1 left">Ubah password</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card mt-3">
-                <br><br><br>
-                <h2 class="h4 card-title text-center">Jumlah Saldo</h2>
-                <h2 class="h4 card-title text-center">Rp300.000,00</h2>
-                <br><br><br>
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body">
-                <h2 class="h4 card-title">Profile</h2>
-                </div>
-              </div>
-              <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body">
-                <form>
-                    <div class="form-row">
-                     <div class="form-group col-md-6">
-                     <label for="inputNama">Nama Lengkap:</label>
-                     <input type="text" class="form-control" id="inputNama">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputUsername">Username:</label>
-                      <input type="text" class="form-control" id="inputUsername">
-                    </div>
-                    </div>
-                </form>
-                </div>
-              </div>
-            </div>
             </div>
           </div>
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <div class="mt-3">
+                    <br />
+                      <h5>Jumlah Saldo</h5>
+                      <h5>RP. 300.000,00</h5>
+                      <br />
+                      <br />
+                      <p class="text-secondary mb-1 left">Tarik Tunai</p>
+                      <p class="text-secondary mb-1 right">Top Up</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-
-
-    
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-  </body>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  
+</script>
+</body>
 </html>
