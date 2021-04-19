@@ -27,8 +27,8 @@
             <hr>
             <br>
             <h4>Form Data Pemesan</h4>
-            {{-- <form method="post" action="/pertandingan/pesantiket">
-                {{ csrf_field() }} --}}
+            <form method="post" action="/pertandingan">
+                {{ csrf_field() }}
                 <div class="form-group">
                   <label for="name">Nama Lengkap</label>
                   <input type="text" class="form-control" id="name" placeholder="Nama Lengkap">
@@ -41,10 +41,8 @@
                   <label for="jumlah">Jumlah Tiket</label>
                   <input type="number" class="form-control" id="jumlah">
                 </div>
-                <a href="/pertandingan">
-                  <button type="submit" class="btn btn-primary">Checkout</button>
-                </a>
-                  {{-- </form> --}}
+                <button type="submit" class="btn btn-primary">Checkout</button>
+              </form>
         </div>
     </div>
 </div>
