@@ -20,7 +20,9 @@ use App\Http\Controllers\PertandinganController;
 
 
 Route::get('/', function () {
+
     return view('home');
+
 });
 Route::resource('/pertandingans', 'App\Http\Controllers\PertandingansController');
 
