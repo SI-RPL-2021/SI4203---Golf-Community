@@ -31,4 +31,4 @@ Route::get('/pertandingan', [PertandinganController::class, 'index']);
 Route::get('/pertandingan/tambah', [PertandinganController::class, 'tambah']);
 Route::post('/pertandingan/store', [PertandinganController::class, 'store']);
 Route::get('/pertandingan/pesan/{id}', [PertandinganController::class, 'pesan']);
-Route::post('/pertandingan/pesantiket', [PertandinganController::class, 'pesantiket']);
+Route::post('/pertandingan/pesantiket', [PertandinganController::class, 'store']);
