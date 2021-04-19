@@ -15,8 +15,8 @@ class CreatePertandinganTable extends Migration
     {
         Schema::create('pertandingan', function (Blueprint $table) {
             $table->increments('pertandingan_id');
-            $table->varchar('pertandingan_nama', 50);
-            $table->varchar('pertandingan_jabatan', 20);
+            $table->string('pertandingan_nama', 50);
+            $table->string('pertandingan_jabatan', 20);
             $table->integer('pertandingan_umur');
             $table->text('pertandingan_alamat');
             $table->timestamps();

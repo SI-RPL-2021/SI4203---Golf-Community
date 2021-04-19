@@ -16,8 +16,8 @@ class CreatePemesanantiketTable extends Migration
         Schema::create('pemesanan_tiket', function (Blueprint $table) {
             $table->increments('id_pemesanantiket');
             $table->integer('id_pertandingan');
-            $table->varchar('nama_lengkap', 50);
-            $table->varchar('email', 50);
+            $table->string('nama_lengkap', 50);
+            $table->string('email', 50);
             $table->integer('jumlah_tiket');
             $table->integer('total_harga');
             $table->integer('status');
