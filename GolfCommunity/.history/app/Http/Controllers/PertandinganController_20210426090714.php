@@ -16,8 +16,8 @@ class PertandinganController extends Controller
         return view('listpertandingan');
     }
 
-    public function buatp(){
-        return view('buatp');
+    public function buat(){
+        return view('buatpertandingan');
     }
 
     public function buatpertandingan(Request $request){
@@ -37,9 +37,12 @@ class PertandinganController extends Controller
         $validatedData = $request->validate([
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
            ]);
-           $gambar = $request->file('image')->store('public/images/upload');
+           $name = $request->file('image')->getClientOriginalName();
+           $path = $request->file('image')->store('public/images');
+           $pertandingan->name = $name;
+           $pertandingan->path = $path;
 
-        $pertandingan->gambar               = $gambar;
+        $pertandingan->gambar               = $request->gambar;
         $pertandingan->jenis                = $request->jenis;
         $pertandingan->kuota_pemain         = $request->kuota_pemain;
         $pertandingan->save();

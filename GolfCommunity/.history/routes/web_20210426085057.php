@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\PertandinganController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,5 +24,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //route pertandingan
 Route::get('/pertandingan', 'PertandinganController@home');
 Route::get('/pertandingan/listpertandingan', 'PertandinganController@list');
-Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
-Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
+Route::get('/pertandingan/buatpertandingan', 'PertandinganController@buat');
+Route::post('/pertandingan/form-pertandingan')

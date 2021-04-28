@@ -16,8 +16,8 @@ class PertandinganController extends Controller
         return view('listpertandingan');
     }
 
-    public function buatp(){
-        return view('buatp');
+    public function buat(){
+        return view('buatpertandingan');
     }
 
     public function buatpertandingan(Request $request){
@@ -39,7 +39,7 @@ class PertandinganController extends Controller
            ]);
            $gambar = $request->file('image')->store('public/images/upload');
 
-        $pertandingan->gambar               = $gambar;
+        $pertandingan->gambar               = $request->gambar;
         $pertandingan->jenis                = $request->jenis;
         $pertandingan->kuota_pemain         = $request->kuota_pemain;
         $pertandingan->save();

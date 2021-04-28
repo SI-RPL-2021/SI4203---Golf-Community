@@ -17,7 +17,7 @@ class PertandinganController extends Controller
     }
 
     public function buatp(){
-        return view('buatp');
+        return view('buatpertandingan');
     }
 
     public function buatpertandingan(Request $request){
