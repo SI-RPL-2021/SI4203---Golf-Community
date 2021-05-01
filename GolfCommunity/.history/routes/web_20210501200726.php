@@ -29,4 +29,4 @@ Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
 
 //route cuaca
-Route::get('/cuaca', 'CuacaController@index');
+Route::get('/cuaca', 'CuacaController@home');
