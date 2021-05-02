@@ -131,7 +131,7 @@
                                                         <a href="{{URL::to('/pertandingan/listpertandingan')}}"><span>List Pertandingan</span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{URL::to('/pertandingan/buatp')}}">Buat Pertandingan</a>
+                                                        <a href="{{URL::to('/pertandingan/buatpertandingan')}}">Buat Pertandingan</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -202,7 +202,7 @@
                                         </a>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="#">
+                                        <a href="{{URL::to('/pertandingan')}}">
                                             <span class="mm-text">Pertandingan 
                                             <i class="ion-ios-arrow-down"></i>
                                         </span>
@@ -214,7 +214,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{URL::to('/buatp')}}">
+                                                <a href="{{URL::to('/buatpertandingan')}}">
                                                     <span class="mm-text">Buat Pertandingan</span>
                                                 </a>
                                             </li>

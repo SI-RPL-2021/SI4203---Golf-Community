@@ -131,7 +131,7 @@
                                                         <a href="{{URL::to('/pertandingan/listpertandingan')}}"><span>List Pertandingan</span></a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{URL::to('/pertandingan/buatp')}}">Buat Pertandingan</a>
+                                                        <a href="{{URL::to('/pertandingan/buatpertandingan')}}">Buat Pertandingan</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -214,7 +214,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{URL::to('/buatp')}}">
+                                                <a href="{{URL::to('/buatpertandingan')}}">
                                                     <span class="mm-text">Buat Pertandingan</span>
                                                 </a>
                                             </li>
