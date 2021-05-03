@@ -14,7 +14,7 @@ class CreatePertandingansTable extends Migration
     public function up()
     {
         Schema::create('pertandingans', function (Blueprint $table) {
-            $table->increments('id_pertandingan');
+            $table->bigIncrements('id_pertandingan');
             $table->string('nama');
             $table->string('lapangan');
             $table->text('alamat');
