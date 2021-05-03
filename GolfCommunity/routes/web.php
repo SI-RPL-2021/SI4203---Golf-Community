@@ -25,3 +25,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/pertandingan', 'PertandinganController@home');
 Route::get('/pertandingan/listpertandingan', 'PertandinganController@list');
 Route::get('/pertandingan/buatpertandingan', 'PertandinganController@buat');
+
