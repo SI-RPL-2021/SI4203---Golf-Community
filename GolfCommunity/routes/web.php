@@ -25,10 +25,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //route pertandingan
 Route::get('/pertandingan', 'PertandinganController@home');
 Route::get('/pertandingan/listpertandingan', 'PertandinganController@list');
-<<<<<<< HEAD
+
 Route::get('/pertandingan/buatpertandingan', 'PertandinganController@buat');
 
-=======
+
 Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
 Route::get('/pertandingan/showpertandingan', 'PertandinganController@show');
@@ -37,4 +37,4 @@ Route::get('/cuaca', 'CuacaController@index');
 
 //route tiket
 Route::get('/tiket', 'TiketController@index');
->>>>>>> 9f857be14baf3755334f03d55e51a9e3c7fa883f
+
