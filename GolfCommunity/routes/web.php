@@ -26,4 +26,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/pertandingan', 'PertandinganController@home');
 Route::get('/pertandingan/listpertandingan', 'PertandinganController@list');
 Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
+Route::get('/pertandingan/showpertandingan', 'PertandinganController@show');
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
