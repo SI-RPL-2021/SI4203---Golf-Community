@@ -15,12 +15,16 @@ class PertandinganController extends Controller
 
     public function list(){
     	$pertandingans = DB::table('pertandingans')->get();
- 
+
     	return view('listpertandingan',['pertandingans' => $pertandingans]);
     }
 
     public function buatp(){
         return view('buatp');
+    }
+
+    public function show(){
+        return view('showpertandingan', $game->id_pertandingan);
     }
 
     public function buatpertandingan(Request $request){
@@ -47,7 +51,7 @@ class PertandinganController extends Controller
                 'gambar'            => $name,
                 'jenis'             => $request->jenis,
                 'kuota_pemain'      => $request->kuota_pemain
-                
+
                 ]);
                 return redirect('/pertandingan/listpertandingan')->with(['success' => 'Pertandingan berhasil dibuat']);
         }else{

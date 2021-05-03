@@ -27,7 +27,7 @@ Route::get('/pertandingan', 'PertandinganController@home');
 Route::get('/pertandingan/listpertandingan', 'PertandinganController@list');
 Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
-
+Route::get('/pertandingan/showpertandingan', 'PertandinganController@show');
 //route cuaca
 Route::get('/cuaca', 'CuacaController@index');
 
