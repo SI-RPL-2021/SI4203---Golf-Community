@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::view('/profile', 'editProfile');
 Route::get('/profile', 'App\Http\Controllers\ProfileController@edit');
 Route::put('/profile', 'App\Http\Controllers\ProfileController@update');
+
+Route::get('/forum','ForumController@index');
