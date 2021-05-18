@@ -1,37 +1,32 @@
-@extends($layout)
+@extends('utama')
 
-@section('breadcrumbs')
-    <ol class="breadcrumb">
-        <li class="active">Forums</li>
-    </ol>
-@stop
-
-@section('content')
-    <h1>{{ $sitename or 'Laravel' }} - Forums</h1>
-    <div class="forums">
-    @if(isset($categories) && !empty($categories))
-        <table class="table forum-category">
-        @foreach($categories as $cat)
-                <thead>
-                    <tr>
-                        <th>{{ $cat->name }}</th>
-                        <th>Posts</th>
-                    </tr>
-                </thead>
-                @foreach($cat->forums as $forum)
-                    <tr class="forum">
-                        <td><a href="{{ route('laravel-forum.view', ['id' => $forum->id]) }}">{{ $forum->name }}</a>
-                        @if(isset($forum->description) && !empty($forum->description))
-                        <small> - {{ $forum->description }}</small>
-                        @endif
-                        </td>
-                        <td>{{ $forum->getThreadCount() }}</td>
-                    </tr>
-                @endforeach
-        @endforeach
-        </table>
-    @else
-        <p>You have no forum categories yet.</p>
-    @endif
-    </div>
-@stop
+@section('konten')
+    <div class="main">
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Forum</h3>
+                                    <div class="right">
+                                        <a href="#" class="btn btn-sm btn-primary">Add new Forum</a>
+                                        
+                                    </div>
+                                    <div class="panel-body">
+                                    <ul class="list-unstyled activity-list">
+                                    @foreach($forum as $frm)
+										<li>
+											<img src="#" alt="Avatar" class="img-circle pull-left avatar">
+											<p><a href="#">{{$frm->user->username}} : {{$frm->judul}}  <span class="timestamp">{{$frm->created_at->diffForHumans()}}</span></p>
+										</li>
+                                    @endforeach
+									</ul>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+@endsection

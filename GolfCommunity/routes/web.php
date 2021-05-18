@@ -38,3 +38,6 @@ Route::get('/cuaca', 'CuacaController@index');
 //route tiket
 Route::get('/tiket', 'TiketController@index');
 
+//route forum
+Route::get('/forum', 'ForumController@index');
+
