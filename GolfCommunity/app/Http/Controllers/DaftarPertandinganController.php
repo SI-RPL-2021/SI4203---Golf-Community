@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DaftarPertandingan;
 use App\Models\Pertandingan;
 use Illuminate\Http\Request;
 use App\Models\Post;
@@ -12,11 +13,11 @@ class DaftarPertandinganController extends Controller
     public function store(Request $request){
 
         $new = new Daftarpertandingan();
-        $user = $request->session()->get('user');
-        $game = Pertandingan::findorfail($request->id);
-        $new->id_daftarpertandingan = $game->id;
-        $new->user_id = $user->id;
-        return view('home');
+        $user = Auth::id();
+        $game = Pertandingan::where($request->id_pertandingan);
+        $new->id_daftarpertandingan = $game;
+        $new ->user_id = $request->$user
+        return view('listpertandingan',['pertandingans' => $pertandingans]);
     }
 
     public function show(Request $request, $id){

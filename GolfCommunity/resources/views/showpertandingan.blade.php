@@ -41,13 +41,16 @@
 
     </div>
 @endif --}}
-
-
+<div class="container py-5 d-flex align-items-center" style="min-height: 100vh">
+<div class="row">
+<form name="daftarpertandingan" id="daftarpertandingan" method="post" enctype="multipart/form-data" action="{{url('/daftarpertandingan/store')}}">
+    {{ csrf_field() }}
 
       @if (!$pertandingans->isEmpty())
       @foreach ($pertandingans as $key => $game)
-
+      <div class="col-md-4">
                   <img src="{{ URL::asset('images/upload/') }}/{{ $game->gambar }}" class="card-img-top" alt="{{$game->nama}}" style="object-fit: cover; height: 200px;">
+      </div>
             {{$game->nama}}<br>
             {{$game->lapangan}}<br>
             {{$game->alamat}}<br>
@@ -62,6 +65,15 @@
             {{$game->jenis}}<br>
             {{$game->kuota_pemain}}<br>
 
+            <div class="d-flex">
+                <a class="btn btn-warning" href='{{ url('/pertandingan/listpertandingan') }}'>
+                    Daftar Pertandingan
+                </a>
+            </div>
+
 @endforeach
 @endif
+</form>
+</div>
+</div>
 @endsection

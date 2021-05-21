@@ -23,16 +23,17 @@ class PertandinganController extends Controller
         return view('buatp');
     }
 
-    public function show($key){
+    public function show(Request $request, $id_pertandingan){
+        $pertandingans = DB::table('pertandingans')->where('id_pertandingan',$id_pertandingan)->get();
 
 
-    	return view('showpertandingan',['pertandingans' => $pertandingans]);
-        echo $key;
-        //$game = Pertandingan::findorfail($id);
-        //$user = $request->session()->get('user');
-        // $daftarpertandingan = Daftarpertandingan::join('users','users.id', '=', 'daftarpertandingans.user_id')->
-        //     select('users.name', 'users.email')->where('daftarpertandingans.id_pertandingan', '=', $id)->get();
-        //return view('showpertandingan');
+
+        $game = Pertandingan::where($id_pertandingan);
+        $user = $request->session()->get('user');
+         $daftarpertandingans = DB::table('daftarpertandingans')->join('users','users.id', '=', 'daftarpertandingans.user_id')->
+             select('users.name', 'users.email')->where('daftarpertandingans.id_daftarpertandingan',$id_pertandingan)->get();
+
+        return view('showpertandingan',['pertandingans' => $pertandingans]);
     }
 
     public function buatpertandingan(Request $request){
