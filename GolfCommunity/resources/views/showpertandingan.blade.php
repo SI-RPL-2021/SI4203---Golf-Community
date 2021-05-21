@@ -66,7 +66,7 @@
             {{$game->kuota_pemain}}<br>
 
             <div class="d-flex">
-                <a class="btn btn-warning" href='{{ url('/pertandingan/listpertandingan') }}'>
+                <a class="btn btn-warning" href='{{ url('/pertandingan/daftarpertandingan') }}'>
                     Daftar Pertandingan
                 </a>
             </div>
