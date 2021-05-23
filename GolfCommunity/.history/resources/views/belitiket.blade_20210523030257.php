@@ -170,8 +170,8 @@ $pertandingans = DB::table('pertandingans')->where('id_pertandingan', $no)-> get
             {{ '-' }}
             @endif
             </b>
-            <br>
-            <a class="btn btn-success mt-2 w-100" href="{{URL::to('/digitalwallet/topup')}}">Top Up Saldo</a>
+            <br><br>
+            <a class="btn btn-success" href="{{URL::to('/dw/topup')}}">Top Up Saldo</a>
 
             <hr>
         </div></div>

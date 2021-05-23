@@ -171,7 +171,7 @@ $pertandingans = DB::table('pertandingans')->where('id_pertandingan', $no)-> get
             @endif
             </b>
             <br>
-            <a class="btn btn-success mt-2 w-100" href="{{URL::to('/digitalwallet/topup')}}">Top Up Saldo</a>
+            <a class="btn btn-success mt-2 float-end" href="{{URL::to('/dw/topup')}}">Top Up Saldo</a>
 
             <hr>
         </div></div>

@@ -46,6 +46,3 @@ Route::get('/forum', 'ForumController@index');
 //route digital wallet (dw)
 
 Route::get('/digitalwallet', 'DwController@index');
-Route::get('/digitalwallet/topup', 'DwController@topup');
-Route::post('/digitalwallet/tambahsaldobaru','DwController@tambahsaldobaru');
-Route::post('/digitalwallet/tambahsaldo','DwController@tambahsaldo');

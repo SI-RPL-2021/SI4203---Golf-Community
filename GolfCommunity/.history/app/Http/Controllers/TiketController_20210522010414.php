@@ -20,7 +20,7 @@ class TiketController extends Controller
 
         if (Auth::check()) {
            
-            return view('belitiket');
+            return view('belitiket',['pertandingans' => $pertandingans]);
         } else {
             return Redirect::to('login?login=0');
         }

@@ -145,12 +145,11 @@ $pertandingans = DB::table('pertandingans')->where('id_pertandingan', $no)-> get
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form> 
         </div>
-        @endforeach
-        @endif
         <div class="col-md-6">
                         
-            @php   
-            $dw = DB::table('digital_wallets')->where('id_user', Auth::user()->id)-> get();
+            @php
+            $no = $_GET['no'];    
+            $pertandingans = DB::table('pertandingans')->where('id_pertandingan', $no)-> get();
             @endphp
             
             <img src="{{ URL::asset('images/upload/') }}/{{ $p->gambar }}" alt="Beli Tiket" class="mw-100 p-8">
@@ -159,24 +158,12 @@ $pertandingans = DB::table('pertandingans')->where('id_pertandingan', $no)-> get
             <br>
             Akun: <b>{{ Auth::user()->name }}</b>
             <br>
-            
-            Saldo: Rp<b>
-            @if (!$dw->isEmpty())
-            @foreach ($dw as $key => $p)
-            {{ $p->saldo }}
-            
-            @endforeach
-            @else
-            {{ '-' }}
-            @endif
-            </b>
-            <br>
-            <a class="btn btn-success mt-2 w-100" href="{{URL::to('/digitalwallet/topup')}}">Top Up Saldo</a>
-
+            Saldo: Rp
             <hr>
         </div></div>
 
-      
+      @endforeach
+  @endif
     
 </div>
 @endsection

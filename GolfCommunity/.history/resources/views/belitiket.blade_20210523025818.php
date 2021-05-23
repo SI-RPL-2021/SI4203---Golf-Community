@@ -160,20 +160,22 @@ $pertandingans = DB::table('pertandingans')->where('id_pertandingan', $no)-> get
             Akun: <b>{{ Auth::user()->name }}</b>
             <br>
             
-            Saldo: Rp<b>
+            Saldo: Rp
             @if (!$dw->isEmpty())
             @foreach ($dw as $key => $p)
             {{ $p->saldo }}
-            
             @endforeach
             @else
-            {{ '-' }}
+            -
             @endif
-            </b>
-            <br>
-            <a class="btn btn-success mt-2 w-100" href="{{URL::to('/digitalwallet/topup')}}">Top Up Saldo</a>
-
+            
             <hr>
+
+            @if ()
+                
+            @else
+                
+            @endif
         </div></div>
 
       
