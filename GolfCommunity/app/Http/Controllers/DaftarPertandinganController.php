@@ -16,12 +16,12 @@ class DaftarPertandinganController extends Controller
         $user = Auth::id();
         $game = Pertandingan::where($request->id_pertandingan);
         $new->id_daftarpertandingan = $game;
-        $new ->user_id = $request->$user
+        $new ->user_id = $request->$user;
         // $new ->save();
-        $save = DB::table('pertandingans')->insert([
-                'id_daftarpertandingan'              => $request->id_daftarpertandingan,
-                'user_id'          => $request->user_id
-        ]);
+        // $save = DB::table('pertandingans')->insert([
+        //         'id_daftarpertandingan'              => $request->id_daftarpertandingan,
+        //         'user_id'          => $request->user_id
+        // ]);
         return view('listpertandingan',['pertandingans' => $pertandingans]);
 
 
