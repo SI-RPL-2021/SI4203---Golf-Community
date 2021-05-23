@@ -8,6 +8,27 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('images/logo_small.png') }}" />
     <link rel="stylesheet" href="{{ URL::asset('css/vendor/vendor.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/plugins/plugins.min.css') }}">
+    <style>
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .right {
+            text-align: right;
+            float: right;
+        }
+        .forum {
+            border: 0px solid black;
+        }
+        .color {
+            border: 1px solid white;
+            padding: 15px;
+            background: lightgray;
+            background-clip: border-box;  
+        }
+    </style>
 
     <link rel="stylesheet" href="{{ URL::asset('css/style.min.css') }}">
     <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
