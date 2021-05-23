@@ -41,7 +41,7 @@
 
     </div>
 @endif --}}
-<div class="container text-center py-5 d-flex align-items-center" style="min-height: 100vh">
+<div class="container  py-5 d-flex align-items-center" style="min-height: 100vh">
 
     <form name="daftarpertandingan" id="daftarpertandingan" method="post" enctype="multipart/form-data" action="{{url('/daftarpertandingan/store')}}">
     {{ csrf_field() }}
@@ -75,8 +75,8 @@
             </div>
         </div>
 
-            <div class>
-                <a class="btn btn-warning " href='{{ url('/pertandingan/daftarpertandingan') }}'>
+            <div class="text-center">
+                <a class="btn btn-warning mt-3 " href='{{ url('/pertandingan/daftarpertandingan') }}'>
                     Daftar Pertandingan
                 </a>
             </div>
