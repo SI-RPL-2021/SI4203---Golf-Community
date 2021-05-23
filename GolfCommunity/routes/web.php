@@ -32,11 +32,13 @@ Route::get('/pertandingan/buatpertandingan', 'PertandinganController@buat');
 Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
 Route::get('/pertandingan/showpertandingan/{key}', 'PertandinganController@show');
+Route::get('/pertandingan/daftarpertandingan', 'DaftarPertandinganController@store');
 //route cuaca
 Route::get('/cuaca', 'CuacaController@index');
 
 //route tiket
 Route::get('/tiket', 'TiketController@index');
+Route::get('/tiket/beli', 'TiketController@beli');
 
 //route forum
 Route::get('/forum', 'ForumController@index');
