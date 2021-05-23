@@ -11,18 +11,28 @@
                                     <h3 class="panel-title">Forum</h3>
                                     <div class="right">
                                         <a href="#" class="btn btn-sm btn-primary">Add new Forum</a>
-                                        
                                     </div>
-                                    <div class="panel-body">
-                                    <ul class="list-unstyled activity-list">
+                                    <br />
+                                    <br />
                                     @foreach($forum as $frm)
+                                    <div class="color">
+                                    <div class="col-md-8 d-flex">
+                                    <div class="my-auto">
+                                    <table class="forum">
+                                    <ul class="forum">
 										<li>
-											<img src="#" alt="Avatar" class="img-circle pull-left avatar">
-											<p><a href="#">{{$frm->user->username}} : {{$frm->judul}}  <span class="timestamp">{{$frm->created_at->diffForHumans()}}</span></p>
+                                            <tr>
+											<td><img src="{{ URL::asset('images/upload/') }}/{{$frm->user->profile_photo_path}}" alt="Avatar" class="avatar"></td>
+											<td><a href="#">{{$frm->user->name}} : {{$frm->judul}}</a> <br /><span class="timestamp">{{$frm->created_at->diffForHumans()}}</span></td>
+                                            </tr>
 										</li>
-                                    @endforeach
 									</ul>
+                                    </table>
+                                    <br />
                                     </div>
+                                    </div>
+                                    </div>
+                                    @endforeach
                                 </div>
                         </div>
                     </div>
