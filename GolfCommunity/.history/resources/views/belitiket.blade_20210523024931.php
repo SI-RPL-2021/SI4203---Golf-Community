@@ -1,21 +1,50 @@
 @extends('utama')
-@section('judul_halaman', 'Buat Pertandingans')
+@section('judul_halaman', 'Tiket')
 @section('konten')
 
+@php
+$no = $_GET['no'];    
+$pertandingans = DB::table('pertandingans')->where('id_pertandingan', $no)-> get();
+@endphp
+
 <div class="container">
-    <h2 class="mt-4 text-center">Buat Pertandingan</h2>
-    <a href="{{ url('/pertandingan/listpertandingan') }}" class="btn btn-primary">List Pertandingan</a>
-    <div class="row my-4">
+    <h2 class="mt-4 mb-4 text-center">Beli Tiket Pertandingan</h2>
+      @if (!$pertandingans->isEmpty())
+      @foreach ($pertandingans as $key => $p)
+ 
+      <div class="card mb-3">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <img src="{{ URL::asset('images/upload/') }}/{{ $p->gambar }}" class="card-img img-fluid" style="object-fit: cover; max-height: 140px;" alt="{{$p->nama}}">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">{{ $p->nama }}</h5>
+              <p class="card-text">Rp{{ $p ->harga_tiket}}</p>
+              <p class="card-text">
+                  <small class="text-muted">
+                      <i class="fa fa-calendar"></i> {{ $p->tgl_mulai }} | <i class="fa fa-map-marker"></i> {{ $p->lapangan }}
+                    </small>
+                </p>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-end">
+            <a href="tiket/beli?no={{$p->id_pertandingan}}" class="d-inline-flex align-self-center btn btn-success m-2 px-8">Beli</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-4">
         <div class="col-md-6">
 
             <form name="buatpertandingan" id="buatpertandingan" method="post" enctype="multipart/form-data" action="{{url('/pertandingan/form-pertandingan')}}">
                 {{ csrf_field() }}
-
+        
                 <div class="form-group mb-2">
                 <label for="inputnama">Nama Pertandingan</label>
                 <input type="text" id="inputnama" name="nama" class="form-control" required="">
                 </div>
-
+        
                 <div class="form-group mb-2">
                 <label for="inputlapangan">Nama Lapangan Golf</label>
                 <input type="text" id="inputlapangan" name="lapangan" class="form-control" required="">
@@ -37,17 +66,17 @@
                 </div>
 
                 <div class="form-group mb-2">
-                    <label for="inputharga_tiket">Harga Tiket</label>
+                    <label for="inputharga_tiket">Harga Tiket</label>    
                     <div class="input-group mb-2">
                         <div class="input-group-prepend">
                           <div class="input-group-text">Rp</div>
                         </div>
                         <input type="number" name="harga_tiket" id="inputharga_tiket" min="0" class="form-control">
                       </div>
-
+                    
                 </div>
 
-
+  
                 <div class="form-group mb-2">
                     <label for="inputcabang">Cabang</label>
                     <select class="form-control" id="inputcabang" name="cabang" class="form-control">
@@ -112,14 +141,29 @@
                     <label for="inputkuota_pemain">Kuota Pemain</label>
                     <input type="number" min="1" name="kuota_pemain" id="inputkuota_pemain" class="form-control">
                 </div>
-
+        
                 <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+            </form> 
         </div>
         <div class="col-md-6">
-            <img src="{{ URL::asset('images/buatp.jpg') }}" alt="Buat Pertandingan" class="mw-100">
+                        
+            @php
+            $no = $_GET['no'];    
+            $pertandingans = DB::table('pertandingans')->where('id_pertandingan', $no)-> get();
+            @endphp
+            
+            <img src="{{ URL::asset('images/upload/') }}/{{ $p->gambar }}" alt="Beli Tiket" class="mw-100 p-8">
+            <hr>
+            <h3 class="text-center">Dompet Digital Anda</h3>
+            <br>
+            Akun: <b>{{ Auth::user()->name }}</b>
+            <br>
+            Saldo: Rp
+            <hr>
         </div></div>
+
+      @endforeach
+  @endif
+    
 </div>
-
-
 @endsection

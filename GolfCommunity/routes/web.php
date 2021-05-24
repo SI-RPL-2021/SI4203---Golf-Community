@@ -32,16 +32,26 @@ Route::get('/pertandingan/buatpertandingan', 'PertandinganController@buat');
 Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
 Route::get('/pertandingan/showpertandingan/{key}', 'PertandinganController@show');
-Route::get('/pertandingan/daftarpertandingan', 'DaftarPertandinganController@store');
+Route::post('/pertandingan/daftarpertandingan', 'DaftarPertandinganController@store');
 //route cuaca
 Route::get('/cuaca', 'CuacaController@index');
 
 //route tiket
 Route::get('/tiket', 'TiketController@index');
 Route::get('/tiket/beli', 'TiketController@beli');
+Route::get('/tiket/bayar', 'TiketController@bayartiket');
+Route::post('/tiket/hasiltiket', 'TiketController@hasiltiket');
+Route::get('/tiket/tiketsaya', 'TiketController@tiketsaya');
+Route::get('/tiket/printtiket', 'TiketController@print');
 
 //route forum
 Route::get('/forum', 'ForumController@index');
 Route::post('forum/create', 'ForumController@create');
 Route::get('/forum/{forum}/view','ForumController@view');
 
+//route digital wallet (dw)
+
+Route::get('/digitalwallet', 'DwController@index');
+Route::get('/digitalwallet/topup', 'DwController@topup');
+Route::post('/digitalwallet/tambahsaldobaru','DwController@tambahsaldobaru');
+Route::post('/digitalwallet/tambahsaldo','DwController@tambahsaldo');
