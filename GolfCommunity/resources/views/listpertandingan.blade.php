@@ -7,6 +7,12 @@
     <a href="{{ url('/pertandingan/buatp') }}" class="btn btn-success">Buat Pertandingan</a>
     <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
 
+    <p>Pilih Cabang :</p>
+    <form action="/pertandingan/pilih" method="GET">
+        <input type="text" name="pilih" placeholder="pilih cabang" value="{{ old('pilih') }}">
+        <input type="submit" value="PILIH">
+    </form>    
+
       @if (!$pertandingans->isEmpty())
       @foreach ($pertandingans as $key => $game)
       <div class="col-md-3">
@@ -23,10 +29,9 @@
                               {{ $game->deskripsi_singkat }}
                           @endif
                       </p>
-                      <p class ="card-text">Rp. {{ $game ->harga_tiket}} </p>
                       <div class="d-flex">
                           <a class="btn btn-warning" href='{{ url('/pertandingan/showpertandingan', $game->id_pertandingan) }}'>
-                              See Details
+                              Selengkapnya
                           </a>
                       </div>
                   </div>

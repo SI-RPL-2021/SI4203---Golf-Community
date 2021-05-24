@@ -1,4 +1,5 @@
 
+
 @extends('layouts.app')
 
 @section('content')
@@ -73,6 +74,41 @@
 </div>
 @endsection
 
+<style>
+    .alert {
+      padding: 20px;
+      background-color: #ff9239;
+      color: white;
+    }
+    
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .closebtn:hover {
+      color: black;
+    }
+    </style>
+
+<?php
+    if(isset($_GET['login'])) {
+?>
+        <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        <strong>Harap login terlebih dahulu!</strong>
+        </div>
+<?php
+    } else {}
+?>
+
+
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -120,5 +156,9 @@
             </div>
         </form>
     </x-jet-authentication-card>
+
 </x-guest-layout>
+
+
+
 
