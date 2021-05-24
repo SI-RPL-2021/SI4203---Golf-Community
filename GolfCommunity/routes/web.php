@@ -42,4 +42,6 @@ Route::get('/tiket/beli', 'TiketController@beli');
 
 //route forum
 Route::get('/forum', 'ForumController@index');
+Route::post('forum/create', 'ForumController@create');
+Route::get('/forum/{forum}/view','ForumController@view');
 

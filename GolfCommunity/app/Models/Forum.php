@@ -7,8 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Forum extends Model
 {
+    
     use HasFactory;
     protected $table = 'forum';
+    protected $primaryKey = 'id_forum';
 
     public function user(){
         return $this->belongsTo(User::class);

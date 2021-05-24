@@ -16,7 +16,6 @@ class Forum extends Migration
         Schema::create('forum', function (Blueprint $table) {
             $table->increments('id_forum');
             $table->string('judul', 255);
-            $table->string('slug', 255);
             $table->text('konten');
             $table->integer('user_id');
             $table->timestamps();
