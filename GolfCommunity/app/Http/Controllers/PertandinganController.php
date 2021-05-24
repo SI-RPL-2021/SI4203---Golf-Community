@@ -19,6 +19,16 @@ class PertandinganController extends Controller
     	return view('listpertandingan',['pertandingans' => $pertandingans]);
     }
 
+    public function pilih(Request $request){
+        $pilih = $request->pilih;
+
+        $pertandingans = DB::table('pertandingans')
+        ->where('pertandingans_cabang','like',"%",$pilih,"%")
+        ->paginate();
+
+        return view('listpertandingan',['pertandingans' => $pertandingans]);
+    }
+
     public function buatp(){
         return view('buatp');
     }

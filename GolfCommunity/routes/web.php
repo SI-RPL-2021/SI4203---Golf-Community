@@ -37,3 +37,5 @@ Route::get('/cuaca', 'CuacaController@index');
 //route tiket
 Route::get('/tiket', 'TiketController@index');
 
+//route pilih cabang
+Route::get('/pertandingan/pilih', 'PertandinganController@pilih');
