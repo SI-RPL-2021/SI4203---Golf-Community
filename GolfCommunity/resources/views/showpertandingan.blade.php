@@ -74,16 +74,31 @@
                 <p class="card-text">Kuota Pemain : {{$game->kuota_pemain}}</p>
             </div>
         </div>
+    </form>
+        <form method="post" action="{{ url('/pertandingan/daftarpertandingan') }}">
+            {{ csrf_field() }}
+            <input type="hidden" name="id_daftarpertandingan" value="{{$game->id_pertandingan}}">
+            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+            <input type="hidden" name="nama" value="{{$game->nama}}">
+            <input type="hidden" name="alamat" value="{{$game->alamat}}">
+            <input type="hidden" name="tgl_mulai" value="{{$game->tgl_mulai}}">
+            <input type="hidden" name="tgl_selesai" value="{{$game->tgl_selesai}}">
+            <input type="hidden" name="cabang" value="{{$game->cabang}}">
+            <input type="hidden" name="jenis" value="{{$game->jenis}}">
+            <input type="hidden" name="level" value="{{$game->level}}">
+            <input type="hidden" name="harga_tiket" value="{{$game->harga_tiket}}">
+
 
             <div class="text-center">
-                <a class="btn btn-warning mt-3 " href='{{ url('/pertandingan/daftarpertandingan') }}'>
+                <button type="submit" class="btn btn-warning mt-3 " >
                     Daftar Pertandingan
-                </a>
+                </button>
             </div>
 
+        </form>
     @endforeach
     @endif
-    </form>
+
 </div>
 
 @endsection

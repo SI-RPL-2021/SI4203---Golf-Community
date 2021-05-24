@@ -17,10 +17,18 @@ class CreateDaftarpertandingansTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_daftarpertandingan');
             $table->unsignedBigInteger('user_id');
+            $table->string('nama');
+            $table->text('alamat');
+            $table->date('tgl_mulai');
+            $table->date('tgl_selesai');
+            $table->integer('harga_tiket');
+            $table->string('cabang');
+            $table->string('level');
+            $table->string('jenis');
             $table->timestamps();
 
-            $table->foreign('id_daftarpertandingan')->references('id_pertandingan')->on('pertandingans');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->foreign('id_daftarpertandingan')->references('id_pertandingan')->on('pertandingans');
+            // $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
