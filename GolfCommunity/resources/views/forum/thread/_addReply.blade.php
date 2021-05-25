@@ -6,7 +6,7 @@
         <textarea name="body" class="form-control wysiwyg"></textarea>
 
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-        <input type="hidden" name="forum_id" value="{{ $forum->id }}" />
+        <input type="hidden" name="id_forum" value="{{ $forum->id }}" />
         <input type="hidden" name="post_id" value="{{ $post->id }}" />
 
         <input class="btn btn-primary" type="submit" value="Reply" />

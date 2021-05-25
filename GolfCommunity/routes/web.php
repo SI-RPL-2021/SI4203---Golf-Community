@@ -48,6 +48,7 @@ Route::get('/tiket/printtiket', 'TiketController@print');
 Route::get('/forum', 'ForumController@index');
 Route::post('forum/create', 'ForumController@create');
 Route::get('/forum/{forum}/view','ForumController@view');
+Route::post('/forum/{forum}/view','ForumController@postkomentar');
 
 //route digital wallet (dw)
 
