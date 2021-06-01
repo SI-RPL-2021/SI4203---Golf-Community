@@ -17,7 +17,7 @@ class Komentar extends Migration
             $table->increments('id_komentar');
             $table->text('konten');
             $table->integer('user_id');
-            $table->integer('forum_id');
+            $table->integer('forum_id_forum');
             $table->integer('parent');
             $table->timestamps();
         });

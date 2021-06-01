@@ -35,7 +35,7 @@ Route::get('/pertandingan/buatpertandingan', 'PertandinganController@buat');
 Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
 Route::get('/pertandingan/showpertandingan/{key}', 'PertandinganController@show');
-Route::get('/pertandingan/daftarpertandingan', 'DaftarPertandinganController@store');
+Route::post('/pertandingan/daftarpertandingan', 'DaftarPertandinganController@store');
 //route cuaca
 Route::get('/cuaca', 'CuacaController@index');
 
@@ -54,6 +54,9 @@ Route::get('/pertandingan/pilih', 'PertandinganController@pilih');
 
 //route forum
 Route::get('/forum', 'ForumController@index');
+Route::post('forum/create', 'ForumController@create');
+Route::get('/forum/{forum}/view','ForumController@view');
+Route::post('/forum/{forum}/view','ForumController@postkomentar');
 
 //route digital wallet (dw)
 
