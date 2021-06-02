@@ -9,7 +9,15 @@ class Komentar extends Model
 {
     use HasFactory;
     protected $table = 'komentar';
-    protected $guarded = ['id_komentar'];
+    protected $primaryKey = 'id_komentar';
+    protected $fillable = [
+        'id_komentar',
+        'konten',
+        'user_id',
+        'forum_id_forum',
+        'created_at',
+        'updated_at'
+    ];
 
 
     public function user(){

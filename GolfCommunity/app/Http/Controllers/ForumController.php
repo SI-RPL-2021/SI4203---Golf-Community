@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Forum;
 use App\Models\Komentar;
+use App\Models\User;
 
 class ForumController extends Controller
 {
@@ -25,6 +26,7 @@ class ForumController extends Controller
 
     public function postkomentar(Request $request){
         $request->request->add(['user_id'=> auth()->user()->id]);
+        //$request->request->add(['forum_id_forum'=> auth()->forum()->id_forum]);
         $komentar = Komentar::create($request->all());
         return redirect()->back()->with('success', 'Komentar berhasil ditambahkan');
     }
