@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             <a href="{{URL::to('/')}}">Kembali ke home</a>
-            
+
         </h2>
     </x-slot>
 
@@ -13,4 +13,6 @@
             </div>
         </div>
     </div>
+
+
 </x-app-layout>

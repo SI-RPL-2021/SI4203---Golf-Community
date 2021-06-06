@@ -14,16 +14,9 @@ class DaftarPertandinganController extends Controller
     public function store(Request $request){
 
 
-        // DB::table('daftarpertandingans')->where('user_id', Auth::user()->id)->get();
-        $pertandingans = DB::table('daftarpertandingans')->where('user_id',Auth::user()->id)->get();
-        // DB::table('daftarpertandingans')->where('id_daftarpertandingan')->get();
-        // DB::table('daftarpertandingans')->join('users','users.id', '=', 'daftarpertandingans.user_id')->
-        // select('users.name', 'users.email')->where('daftarpertandingans.id_daftarpertandingan',$id_pertandingan)->get();
 
-        // $game = Pertandingan::where($request->id_pertandingan);
-        // $new->id_daftarpertandingan = $game;
-        // $new ->user_id = $request->$user;
-        // $new ->save();
+        $pertandingans = DB::table('daftarpertandingans')->where('user_id',Auth::user()->id)->get();
+
         DB::table('daftarpertandingans')->insert([
                 'id_daftarpertandingan' => $request->id_daftarpertandingan,
                 'user_id'          => $request->user_id,
@@ -44,9 +37,9 @@ class DaftarPertandinganController extends Controller
 
     }
 
-    public function show(Request $request, $id){
-        $user = $request->session()->get('user');
-        $game = Pertandingan::findorfail($id);
-        return view('home');
+    public function index(){
+    	$pertandingans = DB::table('daftarpertandingans')->get();
+
+    	return view('daftarpertandingan',['pertandingans' => $pertandingans]);
     }
 }

@@ -33,6 +33,8 @@ Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
 Route::get('/pertandingan/showpertandingan/{key}', 'PertandinganController@show');
 Route::post('/pertandingan/daftarpertandingan', 'DaftarPertandinganController@store');
+Route::get('/pertandingan/daftarpertandingansaya', 'DaftarPertandinganController@index');
+
 //route cuaca
 Route::get('/cuaca', 'CuacaController@index');
 
@@ -56,3 +58,17 @@ Route::get('/digitalwallet', 'DwController@index');
 Route::get('/digitalwallet/topup', 'DwController@topup');
 Route::post('/digitalwallet/tambahsaldobaru','DwController@tambahsaldobaru');
 Route::post('/digitalwallet/tambahsaldo','DwController@tambahsaldo');
+
+
+
+
+
+
+
+
+
+//route health
+Route::get('/health', 'HealthController@index');
+Route::get('/health/create', 'HealthController@health');
+Route::post('/health/monitor', 'HealthController@store');
+Route::get('/health/riwayat', 'HealthController@show');

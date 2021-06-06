@@ -26,7 +26,7 @@
             border: 1px solid white;
             padding: 15px;
             background: lightgray;
-            background-clip: border-box;  
+            background-clip: border-box;
         }
     </style>
 
@@ -69,7 +69,7 @@
 	</div>
 	@endif
     <div class="main-wrapper">
-        
+
         <header class="main-header_area position-relative">
             <div class="header-top py-6 py-lg-3" data-bg-color="#eaf5ff">
                 <div class="container">
@@ -154,6 +154,9 @@
                                                     <li>
                                                         <a href="{{URL::to('/pertandingan/buatp')}}">Buat Pertandingan</a>
                                                     </li>
+                                                    <li>
+                                                        <a href="{{URL::to('/pertandingan/daftarpertandingansaya')}}">Pertandingan Saya</a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>
@@ -164,6 +167,9 @@
                                             </li>
                                             <li>
                                                 <a href="{{URL::to('/cabang')}}"><span>Cabang</span></a>
+                                            </li>
+                                            <li>
+                                                <a href="{{URL::to('/health')}}"><span>Health Monitor</span></a>
                                             </li>
                                             <li class="separator">
                                                 <a href="{{URL::to('/cuaca')}}"><span>Cuaca</span></a>
@@ -224,7 +230,7 @@
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">
-                                            <span class="mm-text">Pertandingan 
+                                            <span class="mm-text">Pertandingan
                                             <i class="ion-ios-arrow-down"></i>
                                         </span>
                                         </a>
@@ -270,7 +276,7 @@
             <div class="global-overlay"></div>
         </header>
         @yield('konten')
-    
+
     <div class="footer-area">
         <div class="footer-top pt-100 pb-80" data-bg-image="{{ URL::asset('images/footer/bg/1-1-1920x454.png') }}">
             <div class="container">

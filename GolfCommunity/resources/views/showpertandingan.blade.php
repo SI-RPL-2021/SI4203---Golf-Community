@@ -59,10 +59,9 @@
             <p class="card-text">Tanggal Selesai : {{$game->tgl_selesai}}</p>
             <p class="card-text">Harga Tiket : Rp. {{$game->harga_tiket}}</p>
 
-            </div>
 
 
-            <div class="card-body">
+
 
                 <p class="card-text">Cabang : {{$game->cabang}}</p>
                 <p class="card-text">Jenis Permainan : {{$game->jenis}}</p>
@@ -74,6 +73,7 @@
                 <p class="card-text">Kuota Pemain : {{$game->kuota_pemain}}</p>
             </div>
         </div>
+        <div class="text-center">
     </form>
         <form method="post" action="{{ url('/pertandingan/daftarpertandingan') }}">
             {{ csrf_field() }}
@@ -89,13 +89,14 @@
             <input type="hidden" name="harga_tiket" value="{{$game->harga_tiket}}">
 
 
-            <div class="text-center">
+
                 <button type="submit" class="btn btn-warning mt-3 " >
                     Daftar Pertandingan
                 </button>
-            </div>
+
 
         </form>
+    </div>
     @endforeach
     @endif
 
