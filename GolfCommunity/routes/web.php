@@ -59,16 +59,13 @@ Route::get('/digitalwallet/topup', 'DwController@topup');
 Route::post('/digitalwallet/tambahsaldobaru','DwController@tambahsaldobaru');
 Route::post('/digitalwallet/tambahsaldo','DwController@tambahsaldo');
 
-
-
-
-
-
-
-
-
 //route health
 Route::get('/health', 'HealthController@index');
 Route::get('/health/create', 'HealthController@health');
 Route::post('/health/monitor', 'HealthController@store');
 Route::get('/health/riwayat', 'HealthController@show');
+
+//route berita
+Route::get('/berita', 'BeritaController@show');
+Route::get('/detailberita/{id}', 'BeritaController@detail');
+
