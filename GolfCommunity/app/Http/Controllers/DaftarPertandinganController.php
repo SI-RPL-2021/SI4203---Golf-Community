@@ -16,7 +16,7 @@ class DaftarPertandinganController extends Controller
 
 
         $pertandingans = DB::table('daftarpertandingans')->where('user_id',Auth::user()->id)->get();
-
+        DB::table('pertandingans')->where('id_pertandingan',$request->id_daftarpertandingan)->decrement('kuota_pemain', 1);
         DB::table('daftarpertandingans')->insert([
                 'id_daftarpertandingan' => $request->id_daftarpertandingan,
                 'user_id'          => $request->user_id,
@@ -32,7 +32,8 @@ class DaftarPertandinganController extends Controller
 
         ]);
         // return view('daftarpertandingan');
-        return view('daftarpertandingan',['pertandingans' => $pertandingans]);
+        return redirect('/pertandingan/daftarpertandingansaya');
+        // return view('daftarpertandingan',['pertandingans' => $pertandingans]);
 
 
     }

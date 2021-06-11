@@ -45,8 +45,8 @@
                 </div>
 
                 <div class="form-group mb-2">
-                    {{-- <input type="hidden" id="inputscore" name="score" class="form-control" required=""> --}}
-                    <input type="hidden" name="score" value="temperature">
+                    <input type="hidden" id="inputscore" name="score" class="form-control" >
+                    {{-- <input type="hidden" name="score" value="temperature"> --}}
                     </div>
 
 

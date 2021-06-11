@@ -18,6 +18,19 @@
                       <h5 class="card-title">%SPO2 : {{ $h->spo2 }}</h5>
                       <h5 class="card-title">BPM : {{ $h->bpm }}</h5>
                       <h5 class="card-title">Temperature : {{ $h->temperature }} C</h5>
+                      @php $kondisi='';
+                       if($h->temperature <= 33) {
+            $kondisi = 'kurang sehat';
+        } else if($h->temperature >33 && $h->temperature <= 34 ){
+            $kondisi = 'lumayan';
+        } else if($h->temperature > 34 && $h->temperature <= 37) {
+            $kondisi = 'sehat';
+        } else {
+            $kondisi='mati';
+        }
+        echo $kondisi;
+                      @endphp
+
                       <h5 class="card-title">Diabetes : {{ $h->diabetes }} mg/dl</h5>
                       <h5 class="card-title">Blood Pressure : {{$h->bloodpress}} / {{$h->bloodpress2}}</h5>
                       <h5 class="card-title">Health Score : {{ $h->score }}</h5>
