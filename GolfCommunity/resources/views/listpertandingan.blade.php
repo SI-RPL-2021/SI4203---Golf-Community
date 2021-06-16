@@ -7,12 +7,10 @@
     <a href="{{ url('/pertandingan/buatp') }}" class="btn btn-success">Buat Pertandingan</a>
     <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
 
-    <p>Pilih Cabang :</p>
-    <form action="/pertandingan/pilih" method="GET">
-        <input type="text" name="pilih" placeholder="pilih cabang" value="{{ old('pilih') }}">
-        <input type="submit" value="PILIH">
-    </form>    
+    <p>Pilih Pertandingan :</p>
+    <input type="text" name="searchbox" id="searchbox" class="form-control" onkeyup="myFunction()" placeholder="Pilih Pertandingan...">
 
+    <div class="col-md-3" id="game">   
       @if (!$pertandingans->isEmpty())
       @foreach ($pertandingans as $key => $game)
       <div class="col-md-3">
@@ -40,6 +38,24 @@
       @endforeach
   @endif
     </div>
+    </div>
+    <script>
+    function myFunction() {
+    var input, filter, cards, cardContainer, h5, title, i;
+    input = document.getElementById("searchbox");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("game");
+    cards = cardContainer.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+        title = cards[i].querySelector(".card-body h5.card-title");
+        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
 </div>
 
 @endsection

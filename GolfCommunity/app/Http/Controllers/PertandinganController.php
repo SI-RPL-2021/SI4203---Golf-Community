@@ -23,8 +23,8 @@ class PertandinganController extends Controller
         $pilih = $request->pilih;
 
         $pertandingans = DB::table('pertandingans')
-        ->where('pertandingans_cabang','like',"%",$pilih,"%")
-        ->paginate();
+        ->where('cabang','like',"%",$pilih,"%")
+        ->get();
 
         return view('listpertandingan',['pertandingans' => $pertandingans]);
     }
