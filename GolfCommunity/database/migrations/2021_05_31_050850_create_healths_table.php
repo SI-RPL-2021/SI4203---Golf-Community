@@ -24,6 +24,7 @@ class CreateHealthsTable extends Migration
             $table->integer('bloodpress2');
             $table->integer('score');
             $table->date('date');
+            $table->timestamps();
         });
     }
 

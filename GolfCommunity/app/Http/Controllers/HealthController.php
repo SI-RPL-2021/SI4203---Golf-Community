@@ -14,13 +14,62 @@ class HealthController extends Controller
 {
 
     public function index(){
-
-        $health = DB::table('healths')->where('user_id',Auth::user()->id)->get();
+     if ($health = DB::table('healths')->where('user_id',Auth::user()->id)->get()){
         return view('health',['health' => $health]);
-
+     } else {
+        return view('auth.login');
+     }
     }
 
     public function store(Request $request ){
+        $beat=$request->bpm;
+        if($beat <= 65) {
+            $beat = 100;
+        } else if($beat >65 && $beat <= 72 ){
+            $beat = 90;
+        } else if($beat >72 && $beat <= 90) {
+            $beat = 80;
+        } else {
+            $beat= 60;
+        }
+        $dia=$request->diabetes;
+        if($dia >= 70 && $dia<= 100 ) {
+            $dia = 100;
+        } else if($dia >=101 && $dia <= 125 ){
+            $dia = 80;
+        } else {
+            $dia = 60;
+        }
+        $bp1=$request->bloodpress;
+        if($bp1 < 80) {
+            $bp1 = 60;
+        } else if($bp1 >=80 && $bp1 <= 120 ){
+            $bp1 = 100;
+        } else if($bp1 >120 && $bp1 <= 140) {
+            $bp1 = 90;
+        } else if($bp1 >140 && $bp1 <= 159) {
+            $bp1 = 70;
+        } else if($bp1 >=160 && $bp1 <= 180) {
+            $bp1 = 60;
+        } else {
+            $bp1 = 50;
+        }
+        $bp2=$request->bloodpress2;
+        if($bp2 < 60) {
+            $bp2 = 60;
+        } else if($bp2 >=60 && $bp2 <= 80 ){
+            $bp2 = 100;
+        } else if($bp2 >80 && $bp2 <= 90) {
+            $bp2 = 90;
+        } else if($bp2 >90 && $bp2 <= 99) {
+            $bp2 = 70;
+        } else if($bp2 >=100 && $bp2 <= 110) {
+            $bp2 = 60;
+        } else {
+            $bp2= 50;
+        }
+
+
         $temp=$request->temperature;
         if($temp <= 33) {
             $temp = 70;
@@ -37,7 +86,7 @@ class HealthController extends Controller
         } else {
             $sp = 70;
         }
-        $nilai= (20/100*$temp) + (20/100*$sp);
+        $nilai= (20/100*$temp) + (20/100*$sp) + (20/100*$dia) + (20/100*$beat) + (10/100*$bp1) + (10/100*$bp2) ;
 
         $health = DB::table('healths')->where('user_id',Auth::user()->id)->get();
         DB::table('healths')->insert([

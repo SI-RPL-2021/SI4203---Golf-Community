@@ -19,29 +19,29 @@
                 </div>
 
                 <div class="form-group mb-2">
-                <label for="inputspo2">SPO2</label>
-                <input type="number" id="inpuspo2" name="spo2" class="form-control" min="0" max="100" required="">
+                <label for="inputspo2">%SPO2</label>
+                <input type="number" id="inpuspo2" name="spo2" class="form-control" min="80" max="100" required="">
                 </div>
 
                 <div class="form-group mb-2">
                 <label for="inputbpm">BPM</label>
-                <input type="number" id="inputbpm" name="bpm" class="form-control" min="0" max="200" required="">
+                <input type="number" id="inputbpm" name="bpm" class="form-control" min="55" max="120" required="">
                 </div>
 
                 <div class="form-group mb-2">
-                    <label for="inputdiabetes">Diabetes</label>
-                    <input type="number" name="diabetes" id="inputdiabetes" class="form-control" min="0" max="200" required="">
+                    <label for="inputdiabetes">Diabetes (mg/dl)</label>
+                    <input type="number" name="diabetes" id="inputdiabetes" class="form-control" min="70" max="200" required="">
                 </div>
 
                 <div class="form-group mb-2">
                     <label for="inputtemperature">Temperature (C)</label>
-                    <input type="number" name="temperature" id="inputtemperature" class="form-control" min="0" max="43" required="" >
+                    <input type="number" name="temperature" id="inputtemperature" class="form-control" min="28" max="43" required="" >
                 </div>
 
                 <div class="form-group mb-2">
                     <label for="inputbloodpress">Blood Pressure</label>
-                    <input type="number" name="bloodpress" id="inputbloodpress" class="form-control" min="0" max="200" required="" placeholder="Systolic">
-                    <input type="number" name="bloodpress2" id="inputbloodpress2" class="form-control" min="0" max="200" required="" placeholder="Diastolic">
+                    <input type="number" name="bloodpress" id="inputbloodpress" class="form-control" min="70" max="200" required="" placeholder="Systolic">
+                    <input type="number" name="bloodpress2" id="inputbloodpress2" class="form-control" min="50" max="130" required="" placeholder="Diastolic">
                 </div>
 
                 <div class="form-group mb-2">
