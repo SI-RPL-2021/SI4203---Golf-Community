@@ -65,3 +65,7 @@ Route::get('/digitalwallet/topup', 'DwController@topup');
 Route::post('/digitalwallet/tambahsaldobaru','DwController@tambahsaldobaru');
 Route::post('/digitalwallet/tambahsaldo','DwController@tambahsaldo');
 
+//route berita
+Route::get('/berita', 'BeritaController@index');
+Route::post('/berita/create', 'BeritaController@create');
+Route::get('/berita/show', 'BeritaController@show');
