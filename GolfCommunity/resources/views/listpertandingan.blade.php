@@ -7,8 +7,8 @@
     <a href="{{ url('/pertandingan/buatp') }}" class="btn btn-success">Buat Pertandingan</a>
     <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
 
-    <p>Pilih Pertandingan :</p>
-    <input type="text" name="searchbox" id="searchbox" class="form-control" onkeyup="myFunction()" placeholder="Pilih Pertandingan...">
+    <p>Pilih Cabang :</p>
+    <input type="text" name="searchbox" id="searchbox" class="form-control" onkeyup="myFunction()" placeholder="Pilih Cabang...">
 
     <div class="col-md-3" id="game">   
       @if (!$pertandingans->isEmpty())
@@ -19,7 +19,7 @@
 
                       style="object-fit: cover; height: 200px;">
                   <div class="card-body">
-                      <h5 class="card-title">{{ $game->nama }}</h5>
+                      <h5 class="card-title">{{ $game->nama }} {{ $game->cabang }}</h5>
                       <p class="card-text">
                           @if (strlen($game->deskripsi_singkat) > 100)
                               {{ substr($game->deskripsi_singkat, 0, 100) . '...' }}
