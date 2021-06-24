@@ -14,7 +14,7 @@ class CreateBeritaTable extends Migration
     public function up()
     {
         Schema::create('berita', function (Blueprint $table) {
-            $table->increments('id_berita');
+            $table->increments('id');
             $table->string('judul');
             $table->text('deskripsi');
             $table->timestamps();

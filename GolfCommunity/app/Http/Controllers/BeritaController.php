@@ -18,8 +18,10 @@ class BeritaController extends Controller
     }
 
     public function create(Request $request){
-        $request->request->add(['id'=>auth()->admin()->id]);
-        $news = DB::table('berita')->orderby('id','desc')->post();
-        return redirect()->back()->with('sukses', 'Berita berhasil ditambahkan');
+        $request->request->add(['id'=>auth()->user()->id]);
+        $save = DB::table('berita')->insert([
+            'judul'             => $request->judul
+        ]);
+        return redirect('/berita/show')->with('sukses', 'Berita berhasil ditambahkan');
     }
 }

@@ -8,7 +8,7 @@
     <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
 
     <p>Pilih Cabang :</p>
-    <input type="text" name="searchbox" id="searchbox" class="form-control" onkeyup="myFunction()" placeholder="Pilih Cabang...">
+    <input type="text" name="searchbox" id="searchbox" class="form-control" onkeyup="myFunction()" placeholder="Pilihan Cabang...">
 
     <div class="col-md-3" id="game">   
       @if (!$pertandingans->isEmpty())
