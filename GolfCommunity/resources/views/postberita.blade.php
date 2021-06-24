@@ -3,7 +3,6 @@
 
 <div class="container">
     <h2 class="mt-4 text-center">Post Berita</h2>
-    <a href="{{ url('/pertandingan/listpertandingan') }}" class="btn btn-primary">List Pertandingan</a>
     <div class="row my-4">
         <div class="col-md-6">
 
