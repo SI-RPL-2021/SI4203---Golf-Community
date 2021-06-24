@@ -5,6 +5,7 @@
 <div class="container">
     <h2 class="mt-4 text-center">List Pertandingan</h2>
     <a href="{{ url('/pertandingan/buatp') }}" class="btn btn-success">Buat Pertandingan</a>
+    <a href="{{ url('/pertandingan/daftarpertandingansaya') }}" class="btn btn-success" style="float: right;">Pertandingan Saya</a>
     <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
 
     <p>Pilih Cabang :</p>
