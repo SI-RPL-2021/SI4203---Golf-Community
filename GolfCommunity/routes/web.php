@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('home');
 });
@@ -72,3 +73,10 @@ Route::get('/health/riwayat', 'HealthController@show');
 Route::get('/berita', 'BeritaController@show');
 Route::get('/detailberita/{id}', 'BeritaController@detail');
 
+=======
+Route::view('/profile', 'editProfile');
+Route::get('/profile', 'App\Http\Controllers\ProfileController@edit');
+Route::put('/profile', 'App\Http\Controllers\ProfileController@update');
+
+Route::get('/forum','ForumController@index');
+>>>>>>> sherina
