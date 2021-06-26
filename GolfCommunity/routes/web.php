@@ -63,7 +63,10 @@ Route::get('/digitalwallet/transfer', 'DwController@transfer');
 Route::post('/digitalwallet/transfer_proses','DwController@transfer_proses');
 
 //route health
-Route::get('/health', 'HealthController@index');
+Route::group( ['middleware' => 'auth' ], function()
+{
+    Route::get('/health', 'HealthController@index');
+});
 Route::get('/health/create', 'HealthController@health');
 Route::post('/health/monitor', 'HealthController@store');
 Route::get('/health/riwayat', 'HealthController@show');

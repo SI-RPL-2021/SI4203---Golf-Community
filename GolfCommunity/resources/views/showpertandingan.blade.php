@@ -89,10 +89,12 @@
             <input type="hidden" name="harga_tiket" value="{{$game->harga_tiket}}">
 
 
-
+            @if ($game->kuota_pemain > 0)
                 <button type="submit" class="btn btn-warning mt-3 " >
                     Daftar Pertandingan
                 </button>
+            @endif
+
 
 
         </form>

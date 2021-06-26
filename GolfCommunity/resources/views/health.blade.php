@@ -6,12 +6,12 @@
     <h2 class="mt-4 text-center">Health Monitor</h2>
     <a href="{{ url('/health/create') }}" class="btn btn-success">Hitung Health Score</a>
     <a href="{{ url('health/riwayat') }}" class="btn btn-success" style="float: right;">Riwayat Saya</a>
-    <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
+    <div class="row row-cols-1 row-cols-md-2 g-4 my-4 ">
 
-      @if (!$health->isEmpty())
-      @foreach ($health as $key => $h)
+
+      @foreach ($health as $h)
       <div class="col-md-3 text-center">
-              <div class="card" style="width: 100%;">
+              <div class="card" style="width: 422%;">
 
                   <div class="card-body">
                       <h5 class="card-title"> Tanggal Input : {{ $h->date }}</h5>
@@ -99,7 +99,7 @@
               </div>
       </div>
       @endforeach
-  @endif
+
     </div>
 </div>
 

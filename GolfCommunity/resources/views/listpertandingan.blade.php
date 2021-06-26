@@ -6,25 +6,23 @@
     <h2 class="mt-4 text-center">List Pertandingan</h2>
     <a href="{{ url('/pertandingan/buatp') }}" class="btn btn-success">Buat Pertandingan</a>
     <a href="{{ url('/pertandingan/daftarpertandingansaya') }}" class="btn btn-success" style="float: right;">Pertandingan Saya</a>
+
     <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
-
-      @if (!$pertandingans->isEmpty())
+        @if (!$pertandingans->isEmpty())
       @foreach ($pertandingans as $key => $game)
-      <div class="col-md-3">
-              <div class="card" style="width: 110%;">
-                  <img src="{{ URL::asset('images/upload/') }}/{{ $game->gambar }}" class="card-img-top" alt="{{$game->nama}}"
 
-                      style="object-fit: cover; height: 200px;">
+      <div class="col-md-3">
+              <div class="card" style="width: 100%;">
+                  <img src="{{ URL::asset('images/upload/') }}/{{ $game->gambar }}" class="card-img-top" alt="{{$game->nama}}" style="object-fit: cover; height: 200px;">
                   <div class="card-body">
                       <h5 class="card-title">{{ $game->nama }}</h5>
                           <p class="card-text">Rp{{ $game ->harga_tiket}}</p>
-
-              <p class="card-text">
-                  <small class="text-muted">
-                      <i class="fa fa-calendar"></i> {{ $game->tgl_mulai }} | <i class="fa fa-map-marker"></i> {{ $game->lapangan }}
-                     </small>
-                </p>
-                <p class="card-text">{{ $game ->kuota_pemain}} / {{ $game ->jumlah_pemain}}</p>
+                    <p class="card-text">
+                        <small class="text-muted">
+                        <i class="fa fa-calendar"></i> {{ $game->tgl_mulai }} | <i class="fa fa-map-marker"></i> {{ $game->lapangan }}
+                        </small>
+                    </p>
+                    <p class="card-text">{{ $game ->kuota_pemain}} / {{ $game ->jumlah_pemain}}</p>
                       <div class="d-flex">
                           <a class="btn btn-warning" href='{{ url('/pertandingan/showpertandingan', $game->id_pertandingan) }}'>
                               Selengkapnya
@@ -34,8 +32,9 @@
               </div>
       </div>
       @endforeach
-  @endif
+      @endif
     </div>
+
 </div>
 
 @endsection
