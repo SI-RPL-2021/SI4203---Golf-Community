@@ -14,11 +14,9 @@ class HealthController extends Controller
 {
 
     public function index(){
-     if ($health = DB::table('healths')->where('user_id',Auth::user()->id)->get()){
+        $health = DB::table('healths')->where('user_id',Auth::user()->id)->latest()->take(1)->get();
         return view('health',['health' => $health]);
-     } else {
-        return view('auth.login');
-     }
+
     }
 
     public function store(Request $request ){
