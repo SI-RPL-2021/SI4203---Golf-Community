@@ -9,7 +9,7 @@
 @foreach ($news as $berita)
 <div class="col-md-4 col-sm-12 mt-4">
     <div class="card">
-        <img src=" " class="card-img-top" alt="gambar" >
+        <img src="https://i.ibb.co/4jQz21H/golfberita.jpg" class="card-img-top" alt="gambar" >
         <div class="card-body">
             <h5 class="card-title">{{$berita->judul}}</h5>
             <span class="timestamp">{{$berita->created_at}}</span><br><br>
