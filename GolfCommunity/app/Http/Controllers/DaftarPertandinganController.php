@@ -39,7 +39,7 @@ class DaftarPertandinganController extends Controller
     }
 
     public function index(){
-    	$pertandingans = DB::table('daftarpertandingans')->get();
+    	$pertandingans = DB::table('daftarpertandingans')->where('user_id',Auth::user()->id)->get();
 
     	return view('daftarpertandingan',['pertandingans' => $pertandingans]);
     }
