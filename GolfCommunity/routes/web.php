@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
+
 Route::get('/', function () {
     return view('home');
 });
@@ -64,10 +64,7 @@ Route::get('/digitalwallet/transfer', 'DwController@transfer');
 Route::post('/digitalwallet/transfer_proses','DwController@transfer_proses');
 
 //route health
-Route::group( ['middleware' => 'auth' ], function()
-{
-    Route::get('/health', 'HealthController@index');
-});
+Route::get('/health', 'HealthController@index');
 Route::get('/health/create', 'HealthController@health');
 Route::post('/health/monitor', 'HealthController@store');
 Route::get('/health/riwayat', 'HealthController@show');
@@ -76,10 +73,9 @@ Route::get('/health/riwayat', 'HealthController@show');
 Route::get('/berita', 'BeritaController@show');
 Route::get('/detailberita/{id}', 'BeritaController@detail');
 
-=======
+
 Route::view('/profile', 'editProfile');
 Route::get('/profile', 'App\Http\Controllers\ProfileController@edit');
 Route::put('/profile', 'App\Http\Controllers\ProfileController@update');
 
-Route::get('/forum','ForumController@index');
->>>>>>> sherina
+
