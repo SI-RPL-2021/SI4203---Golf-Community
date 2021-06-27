@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Komentar extends Model
 {
+<<<<<<< HEAD
     use HasFactory;
     protected $table = 'komentar';
     protected $primaryKey = 'id_komentar';
@@ -24,6 +25,12 @@ class Komentar extends Model
         return $this->belongsTo(User::class);
     }
 
+=======
+    protected $table='komentar';
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+>>>>>>> sherina
     public function forum(){
         return $this->belongsTo(Forum::class);
     }

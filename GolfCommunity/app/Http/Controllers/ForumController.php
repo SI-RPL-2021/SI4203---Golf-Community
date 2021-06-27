@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\Forum;
 use App\Models\Komentar;
 use App\Models\User;
+
+use App\Forum;
+
 
 class ForumController extends Controller
 {
@@ -29,5 +33,8 @@ class ForumController extends Controller
         //$request->request->add(['forum_id_forum'=> auth()->forum()->id_forum]);
         $komentar = Komentar::create($request->all());
         return redirect()->back()->with('success', 'Komentar berhasil ditambahkan');
+
+        $forum=Forum::paginate(10);
+        return view ('forum.index',compact(['forum']));
     }
 }

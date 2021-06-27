@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+<<<<<<< HEAD
 
 
 class Forum extends Model
@@ -30,4 +31,15 @@ class Forum extends Model
         return $this->hasMany(Komentar::class);
     }
 
+=======
+class Forum extends Model
+{
+    protected $table='forum';
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    public function komentar(){
+        return $this->hasMany(Komentar::class);
+    }
+>>>>>>> sherina
 }
