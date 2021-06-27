@@ -20,7 +20,7 @@
               <div class="card" style="width: 100%;">
                   <img src="{{ URL::asset('images/upload/') }}/{{ $game->gambar }}" class="card-img-top" alt="{{$game->nama}}" style="object-fit: cover; height: 200px;">
                   <div class="card-body">
-                      <h5 class="card-title">{{ $game->nama }}</h5>
+                      <h5 class="card-title">{{ $game->nama }} {{ $game->cabang }}</h5>
                           <p class="card-text">Rp{{ $game ->harga_tiket}}</p>
                     <p class="card-text">
                         <small class="text-muted">
