@@ -8,8 +8,6 @@ use App\Models\Forum;
 use App\Models\Komentar;
 use App\Models\User;
 
-use App\Forum;
-
 
 class ForumController extends Controller
 {
