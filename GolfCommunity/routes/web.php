@@ -72,7 +72,7 @@ Route::get('/health/riwayat', 'HealthController@show');
 //route berita
 Route::get('/berita', 'BeritaController@show');
 Route::get('/detailberita/{id}', 'BeritaController@detail');
-
+Route::post('/berita/create', 'BeritaController@create');
 
 Route::view('/profile', 'editProfile');
 Route::get('/profile', 'App\Http\Controllers\ProfileController@edit');
