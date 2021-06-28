@@ -168,7 +168,7 @@
                                                 <a href="{{URL::to('/forum')}}"><span>Forum</span></a>
                                             </li>
                                             <li>
-                                                <a href="{{URL::to('/cabang')}}"><span>Cabang</span></a>
+                                                <a href="{{URL::to('/berita')}}"><span>Berita</span></a>
                                             </li>
                                             <li>
                                                 <a href="{{URL::to('/health')}}"><span>Health Monitor</span></a>
