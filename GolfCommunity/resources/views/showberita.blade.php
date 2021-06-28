@@ -45,6 +45,11 @@
             <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3"></textarea>
         </div>
         
+        <div class="form-group mb-2">
+                    <label for="inputgambar">Gambar berita</label><br>
+                    <input type="file" class="form-control-file" id="inputgambar" name="image" class="form-control">
+                </div>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
