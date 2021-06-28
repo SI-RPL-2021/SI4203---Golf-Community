@@ -30,11 +30,19 @@ Route::get('/pertandingan/listpertandingan', 'PertandinganController@list');
 Route::get('/pertandingan/buatpertandingan', 'PertandinganController@buat');
 
 
-Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
+Route::group( ['middleware' => 'auth' ], function()
+{
+    Route::get('/pertandingan/buatp', 'PertandinganController@buatp');
+});
+
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
 Route::get('/pertandingan/showpertandingan/{key}', 'PertandinganController@show');
 Route::post('/pertandingan/daftarpertandingan', 'DaftarPertandinganController@store');
-Route::get('/pertandingan/daftarpertandingansaya', 'DaftarPertandinganController@index');
+Route::group( ['middleware' => 'auth' ], function()
+{
+    Route::get('/pertandingan/daftarpertandingansaya', 'DaftarPertandinganController@index');
+});
+
 
 //route cuaca
 Route::get('/cuaca', 'CuacaController@index');
