@@ -16,4 +16,10 @@ class BeritaController extends Controller
         $news = DB::table('berita')->where('id', $id)->first();
         return view('detailberita', ['news'=>$news]);
     }
+    
+    public function create(Request $request){
+        $request->request->add(['user_id'=>auth()->user()->id]);
+        $news = Berita::create($request->all());
+        return redirect()->back()->with('sukses', 'Berita berhasil ditambahkan');
+    }
 }
