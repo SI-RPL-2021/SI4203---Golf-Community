@@ -9,9 +9,10 @@
     <p> </p>
     <p>Pilih Cabang :</p>
     <input type="text" name="searchbox" id="searchbox" class="form-control" onkeyup="myFunction()" placeholder="Pilihan Cabang...">
+    <div class="row" id="game">
     <div class="row row-cols-1 row-cols-md-2 g-4 my-4">
-    
-      <div class="row" id="game">
+
+
       @if (!$pertandingans->isEmpty())
 
       @foreach ($pertandingans as $key => $game)
