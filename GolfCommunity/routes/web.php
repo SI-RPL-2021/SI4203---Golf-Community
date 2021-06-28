@@ -36,7 +36,12 @@ Route::group( ['middleware' => 'auth' ], function()
 });
 
 Route::post('/pertandingan/form-pertandingan', [PertandinganController::class, 'buatpertandingan']);
-Route::get('/pertandingan/showpertandingan/{key}', 'PertandinganController@show');
+
+
+Route::group( ['middleware' => 'auth' ], function()
+{
+    Route::get('/pertandingan/showpertandingan/{key}', 'PertandinganController@show');
+});
 Route::post('/pertandingan/daftarpertandingan', 'DaftarPertandinganController@store');
 Route::group( ['middleware' => 'auth' ], function()
 {
