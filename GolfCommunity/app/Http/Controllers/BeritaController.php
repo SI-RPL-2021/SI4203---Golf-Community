@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\berita;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 class BeritaController extends Controller
 {
